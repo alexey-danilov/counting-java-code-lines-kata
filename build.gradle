@@ -1,0 +1,36 @@
+buildscript {
+}
+
+plugins {
+    id 'java'
+}
+
+apply plugin: 'java'
+
+def projectName = 'source-line-counter'
+def version = '0.0.1'
+
+jar {
+    enabled = true
+    archiveBaseName.set(version)
+    archiveVersion.set(projectName)
+    manifest {
+        attributes 'Main-Class': 'counter.SourceCodeLinesCounterCli'
+    }
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation('org.junit.jupiter:junit-jupiter:5.5.2')
+}
+
+test {
+    useJUnitPlatform()
+}
+

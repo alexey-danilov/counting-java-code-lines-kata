@@ -1,0 +1,52 @@
+# Folder view configuration files
+.DS_Store
+Desktop.ini
+
+# Java Files #
+*.class
+hs_err_pid*
+
+# Package Files #
+# *.jar, we need to checkin gradle/wrapper/gradle-wrapper.jar
+*.war
+*.ear
+
+# Eclipse files #
+.settings
+.classpath
+.project
+.metadata
+**/bin/
+src/main/java/gov/lr/bg/ws/tmp/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+.settings/
+.loadpath
+.externalToolBuilders/
+*.launch
+
+# IntelliJ files #
+.idea
+local.properties
+*.iml
+*.ipr
+*.iws
+out
+
+# Gradle files #
+.gradle
+build
+out
+target
+logs
+
+# Thumbnail cache files
+._*
+Thumbs.db
+
+# Files that might appear on external disks
+.Spotlight-V100
+.Trashes
