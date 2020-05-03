@@ -28,6 +28,9 @@ public class StatisticsCalculator {
             Files.walk(dir)
                     .filter(path -> path.toFile().toString().endsWith(".java")) // limit search only to java source files
                     .forEach(javaFile -> calculateStatistics(javaFile, cache));
+
+            System.out.println(format("Completed scanning directory [%s].",
+                    dir.toAbsolutePath().normalize().toString()));
             return cache;
         } catch (IOException e) {
             throw new RuntimeException(format("Cannot calculate statistics for dir %s. Provided directory exists: %s", dir.toString(), dir.toFile().exists()));

@@ -22,12 +22,10 @@ public class SourceCodeLinesCounterCli {
             input = scanner.nextLine();
 
             try {
-                // src/test/resources
                 if (Objects.equals(input, "exit")) {
                     stopProgram = true;
                 } else {
                     statisticsPrinter.printStatistics(input);
-                    System.out.println("Scan completed.");
                 }
             } catch (Exception e) {
                 e.printStackTrace();
