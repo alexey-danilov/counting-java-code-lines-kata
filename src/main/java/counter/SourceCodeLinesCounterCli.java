@@ -12,7 +12,7 @@ import static java.lang.String.format;
 public class SourceCodeLinesCounterCli {
     public static void main(String[] args) {
         StatisticsPrinter statisticsPrinter = new StatisticsPrinter(new StatisticsCalculator(new LocCounter()));
-        Scanner scanner = new Scanner(System.in);  // Create a Scanner object
+        Scanner scanner = new Scanner(System.in);
         boolean stopProgram = false;
         String input;
 
